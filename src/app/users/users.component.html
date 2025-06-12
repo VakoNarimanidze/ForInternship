@@ -9,7 +9,6 @@
   </div>
 
   <div class="user-list">
-    <!-- Header Row -->
     <div class="user-row user-header">
       <div class="user-cell">Name</div>
       <div class="user-cell">Username</div>
@@ -20,7 +19,6 @@
       <div class="user-cell">Actions</div>
     </div>
 
-    <!-- Data Rows -->
     @for (user of filteredUsers; track $index) {
       <div class="user-row">
         <div class="user-cell" data-label="Name">{{ user.name }}</div>

@@ -52,8 +52,8 @@
   padding: 10px 12px;
   box-sizing: border-box;
   text-align: left;
-  white-space: normal;       /* allow text wrapping */
-  overflow-wrap: break-word; /* break long words if needed */
+  white-space: normal;       
+  overflow-wrap: break-word; 
   word-break: break-word;
   overflow: visible;
   text-overflow: unset;
@@ -147,12 +147,12 @@
 }
 
 .user-header {
-  display: flex; /* show header on desktop */
+  display: flex; 
 }
 
 @media (max-width: 768px) {
   .user-header {
-    display: none !important; /* hide table header */
+    display: none !important; 
   }
 
   .user-row {
@@ -169,7 +169,6 @@
     min-width: auto;
   }
 
-  /* Show label from data-label attribute */
   .user-cell::before {
     content: attr(data-label);
     font-weight: 700;
@@ -192,7 +191,6 @@
   }
 }
 
-/* Smaller phones adjustments */
 @media (max-width: 480px) {
   .page-container {
     padding: 0.5rem;
@@ -208,7 +206,6 @@
   }
 }
 
-/* Smaller phones adjustments */
 @media (max-width: 480px) {
   .page-container {
     padding: 0.5rem;
