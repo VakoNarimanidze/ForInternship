@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { PostsComponent } from './posts/posts.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { RenderMode } from '@angular/ssr';
 
 export const routes: Routes = [
     {path:'',component:HomepageComponent},
