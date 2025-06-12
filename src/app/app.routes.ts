@@ -7,7 +7,13 @@ export const routes: Routes = [
     {path:'',component:HomepageComponent},
     {path: 'users',component:UsersComponent},
     { path: 'posts', component: PostsComponent }, 
-    {path:'posts/:id',component:PostsComponent},
+    {
+  path: 'posts/:id',
+  component: PostsComponent,
+  data: {
+    renderMode: 'client' 
+  }
+},
     {
   path: 'todos/:id',
   loadComponent: () => import('./todos/todos.component').then(m => m.TodosComponent)
