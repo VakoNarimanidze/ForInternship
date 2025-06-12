@@ -9,10 +9,7 @@ export const routes: Routes = [
     { path: 'posts', component: PostsComponent }, 
     {
   path: 'posts/:id',
-  component: PostsComponent,
-  data: {
-    renderMode: 'client' 
-  }
+ loadComponent:() => import('./posts/posts.component').then(m => m.PostsComponent)
 },
     {
   path: 'todos/:id',
