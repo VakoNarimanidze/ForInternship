@@ -1,0 +1,22 @@
+<div class="posts-container">
+  <h2>{{userName}} Posts</h2>
+  @for (post of posts; track $index) {
+    <div class="card">
+      <h3>{{post.title}}</h3>
+      <p>{{post.body}}</p>
+      <button (click)="openDetails(post)">Details</button>
+    </div>
+  }
+</div>
+
+<!-- Modal -->
+ @if (selectedPost) {
+    <div class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeDetails()">&times;</span>
+    <h3>{{ selectedPost.title }}</h3>
+    <p>{{ selectedPost.body }}</p>
+  </div>
+</div>
+ }
+

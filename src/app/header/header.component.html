@@ -1,11 +1,9 @@
 <header>
-   <nav>
-     <h2>ForInternship</h2>
-     <app-nav></app-nav>
-    <p>
-        {{ dateTime }}
-    </p>
-
-   </nav>
+  <div class="header-container">
+    <nav>
+      <h2 (click)="goToHomePage()">ForInternship</h2>
+      <app-nav></app-nav>
+      <p>{{dateTime}}</p>
+    </nav>
+  </div>
 </header>
-

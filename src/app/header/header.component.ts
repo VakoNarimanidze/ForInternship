@@ -35,4 +35,7 @@ ngOnDestroy(): void {
       second: '2-digit'
     });
   }
+  goToHomePage(){
+    window.location.href = '/'
+  }
 }

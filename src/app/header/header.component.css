@@ -1,8 +1,104 @@
-nav{
-    display: flex;
-    justify-content: space-between;
+.header-container {
+  margin: 0 auto;       
+  width: 50%;            
+  padding: 0 1rem;     
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    width: 80%;          
+  }
+}
+
+header {
+  background-color: #222;
+  padding: 15px 0;       
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #eee;
+}
+
+h2 {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
+  position: relative;
+  color: #eee;
+  transition: color 0.3s ease;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 60%;
+  height: 3px;
+  background: #4caf50;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+h2:hover {
+  color: #4caf50;
+}
+
+h2:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+app-nav {
+  flex-grow: 1;
+  margin: 0 40px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+  margin: 0;
+  min-width: 130px;
+  text-align: right;
+  color: #eee;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0;       
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+  }
+
+  app-nav {
+    margin: 20px 0;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 10px;
+  }
 }

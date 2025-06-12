@@ -1,0 +1,42 @@
+<div class="page-container">
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search by name, username or email"
+      [(ngModel)]="searchTerm"
+    />
+    <button (click)="searchUsers()">Search</button>
+  </div>
+
+  <div class="user-list">
+    <!-- Header Row -->
+    <div class="user-row user-header">
+      <div class="user-cell">Name</div>
+      <div class="user-cell">Username</div>
+      <div class="user-cell">Email</div>
+      <div class="user-cell">Address</div>
+      <div class="user-cell">Phone</div>
+      <div class="user-cell">Company</div>
+      <div class="user-cell">Actions</div>
+    </div>
+
+    <!-- Data Rows -->
+    @for (user of filteredUsers; track $index) {
+      <div class="user-row">
+        <div class="user-cell" data-label="Name">{{ user.name }}</div>
+        <div class="user-cell" data-label="Username">{{ user.username }}</div>
+        <div class="user-cell" data-label="Email">{{ user.email }}</div>
+        <div class="user-cell" data-label="Address">
+          {{ user.address.street }}, {{ user.address.suite }}<br />
+          {{ user.address.city }}, {{ user.address.zipcode }}
+        </div>
+        <div class="user-cell" data-label="Phone">{{ user.phone }}</div>
+        <div class="user-cell" data-label="Company">{{ user.company.name }}</div>
+        <div class="user-cell btns" data-label="Action Buttons" >
+          <button (click)="goToPosts(user)" class="view-btn">View Posts</button>
+          <button (click)="goToTodos(user)">View Todos</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

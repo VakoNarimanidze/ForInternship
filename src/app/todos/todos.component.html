@@ -1,0 +1,9 @@
+<div class="todos-container">
+  <h2>{{ userName }}'s Todos</h2>
+@for (todo of todos; track $index) {
+     <div  class="todo-card" [class.completed]="todo.completed">
+    <p>{{ todo.title }}</p>
+    <span>{{ todo.completed ? '✅ Completed' : '❌ Not Completed' }}</span>
+  </div>
+}
+</div>
