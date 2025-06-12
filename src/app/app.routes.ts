@@ -8,10 +8,6 @@ export const routes: Routes = [
     {path: 'users',component:UsersComponent},
     { path: 'posts', component: PostsComponent }, 
     {
-  path: 'posts/:id',
- loadComponent:() => import('./posts/posts.component').then(m => m.PostsComponent)
-},
-    {
   path: 'todos/:id',
   loadComponent: () => import('./todos/todos.component').then(m => m.TodosComponent)
 }
